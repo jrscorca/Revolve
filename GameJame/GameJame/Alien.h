@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "cocos2d.h"
 
-@interface Alien : NSNode
+@interface Alien : CCSprite
+
+@property (nonatomic, assign) CGPoint velocity;
 
 @end

@@ -10,4 +10,11 @@
 
 @implementation Alien
 
+-(id) init{
+    if(self = [super initWithImageNamed:@"Alien.png"]){
+    }
+    return self;
+}
+
+
 @end

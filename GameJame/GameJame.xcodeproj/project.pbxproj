@@ -210,8 +210,11 @@
 		F2E967B8190BB1F100D0C1FF /* LICENSE_Chipmunk.txt in Resources */ = {isa = PBXBuildFile; fileRef = F2E967B7190BB1F100D0C1FF /* LICENSE_Chipmunk.txt */; };
 		F2E967BC190BB1F100D0C1FF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F2E967BB190BB1F100D0C1FF /* main.m */; };
 		F2E967C0190BB1F100D0C1FF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F2E967BF190BB1F100D0C1FF /* AppDelegate.m */; };
-		F2E967C3190BB1F100D0C1FF /* HelloWorldScene.m in Sources */ = {isa = PBXBuildFile; fileRef = F2E967C2190BB1F100D0C1FF /* HelloWorldScene.m */; };
+		F2E967C3190BB1F100D0C1FF /* MainScene.m in Sources */ = {isa = PBXBuildFile; fileRef = F2E967C2190BB1F100D0C1FF /* MainScene.m */; };
 		F2E967C6190BB1F100D0C1FF /* IntroScene.m in Sources */ = {isa = PBXBuildFile; fileRef = F2E967C5190BB1F100D0C1FF /* IntroScene.m */; };
+		F2E967D0190C1C8800D0C1FF /* Globe-ipadhd.png in Resources */ = {isa = PBXBuildFile; fileRef = F2E967CF190C1C8800D0C1FF /* Globe-ipadhd.png */; };
+		F2E967D3190C2AEA00D0C1FF /* Alien.m in Sources */ = {isa = PBXBuildFile; fileRef = F2E967D2190C2AEA00D0C1FF /* Alien.m */; };
+		F2E967D5190C2D0300D0C1FF /* Alien-ipadhd.png in Resources */ = {isa = PBXBuildFile; fileRef = F2E967D4190C2D0300D0C1FF /* Alien-ipadhd.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -649,10 +652,14 @@
 		F2E967BB190BB1F100D0C1FF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = main.m; path = "Supporting Files/main.m"; sourceTree = "<group>"; };
 		F2E967BE190BB1F100D0C1FF /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = Classes/AppDelegate.h; sourceTree = "<group>"; };
 		F2E967BF190BB1F100D0C1FF /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = Classes/AppDelegate.m; sourceTree = "<group>"; };
-		F2E967C1190BB1F100D0C1FF /* HelloWorldScene.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = HelloWorldScene.h; path = Classes/HelloWorldScene.h; sourceTree = "<group>"; };
-		F2E967C2190BB1F100D0C1FF /* HelloWorldScene.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = HelloWorldScene.m; path = Classes/HelloWorldScene.m; sourceTree = "<group>"; };
+		F2E967C1190BB1F100D0C1FF /* MainScene.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = MainScene.h; path = Classes/MainScene.h; sourceTree = "<group>"; };
+		F2E967C2190BB1F100D0C1FF /* MainScene.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = MainScene.m; path = Classes/MainScene.m; sourceTree = "<group>"; };
 		F2E967C4190BB1F100D0C1FF /* IntroScene.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = IntroScene.h; path = Classes/IntroScene.h; sourceTree = "<group>"; };
 		F2E967C5190BB1F100D0C1FF /* IntroScene.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = IntroScene.m; path = Classes/IntroScene.m; sourceTree = "<group>"; };
+		F2E967CF190C1C8800D0C1FF /* Globe-ipadhd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Globe-ipadhd.png"; sourceTree = "<group>"; };
+		F2E967D1190C2AEA00D0C1FF /* Alien.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Alien.h; sourceTree = "<group>"; };
+		F2E967D2190C2AEA00D0C1FF /* Alien.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Alien.m; sourceTree = "<group>"; };
+		F2E967D4190C2D0300D0C1FF /* Alien-ipadhd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Alien-ipadhd.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -724,6 +731,8 @@
 		F2E9652F190BB1EF00D0C1FF /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				F2E967D4190C2D0300D0C1FF /* Alien-ipadhd.png */,
+				F2E967CF190C1C8800D0C1FF /* Globe-ipadhd.png */,
 				F2E96530190BB1EF00D0C1FF /* Default.png */,
 				F2E96532190BB1EF00D0C1FF /* Default@2x.png */,
 				F2E96534190BB1EF00D0C1FF /* Default-568h@2x.png */,
@@ -1542,10 +1551,12 @@
 			children = (
 				F2E967BE190BB1F100D0C1FF /* AppDelegate.h */,
 				F2E967BF190BB1F100D0C1FF /* AppDelegate.m */,
-				F2E967C1190BB1F100D0C1FF /* HelloWorldScene.h */,
-				F2E967C2190BB1F100D0C1FF /* HelloWorldScene.m */,
+				F2E967C1190BB1F100D0C1FF /* MainScene.h */,
+				F2E967C2190BB1F100D0C1FF /* MainScene.m */,
 				F2E967C4190BB1F100D0C1FF /* IntroScene.h */,
 				F2E967C5190BB1F100D0C1FF /* IntroScene.m */,
+				F2E967D1190C2AEA00D0C1FF /* Alien.h */,
+				F2E967D2190C2AEA00D0C1FF /* Alien.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -1639,7 +1650,9 @@
 				F2E96544190BB1EF00D0C1FF /* Icon-76@2x.png in Resources */,
 				F2E967B8190BB1F100D0C1FF /* LICENSE_Chipmunk.txt in Resources */,
 				F2E96552190BB1EF00D0C1FF /* Icon-Spotlight-iOS7@2x.png in Resources */,
+				F2E967D5190C2D0300D0C1FF /* Alien-ipadhd.png in Resources */,
 				F2E96542190BB1EF00D0C1FF /* Icon-76.png in Resources */,
+				F2E967D0190C1C8800D0C1FF /* Globe-ipadhd.png in Resources */,
 				F2E96718190BB1F100D0C1FF /* ChangeLog in Resources */,
 				F2E96557190BB1EF00D0C1FF /* iTunesArtwork@2x in Resources */,
 			);
@@ -1713,6 +1726,7 @@
 				F2E96569190BB1EF00D0C1FF /* CCActionInterval.m in Sources */,
 				F2E965D8190BB1F000D0C1FF /* CCPhysicsJoint.m in Sources */,
 				F2E965B6190BB1F000D0C1FF /* CCMotionStreak.m in Sources */,
+				F2E967D3190C2AEA00D0C1FF /* Alien.m in Sources */,
 				F2E96566190BB1EF00D0C1FF /* CCActionInstant.m in Sources */,
 				F2E96660190BB1F000D0C1FF /* base64.c in Sources */,
 				F2E9669F190BB1F000D0C1FF /* OALAudioTrack.m in Sources */,
@@ -1747,7 +1761,7 @@
 				F2E96609190BB1F000D0C1FF /* ccShaders.m in Sources */,
 				F2E9671D190BB1F100D0C1FF /* matrix.c in Sources */,
 				F2E9662F190BB1F000D0C1FF /* CCTiledMapLayer.m in Sources */,
-				F2E967C3190BB1F100D0C1FF /* HelloWorldScene.m in Sources */,
+				F2E967C3190BB1F100D0C1FF /* MainScene.m in Sources */,
 				F2E96723190BB1F100D0C1FF /* neon_matrix_impl.c in Sources */,
 				F2E965A8190BB1F000D0C1FF /* CCLabelTTF.m in Sources */,
 				F2E9665D190BB1F000D0C1FF /* NSEvent+CC.m in Sources */,
@@ -1989,6 +2003,7 @@
 				F2E967CB190BB1F100D0C1FF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F2E967CC190BB1F100D0C1FF /* Build configuration list for PBXNativeTarget "GameJame" */ = {
 			isa = XCConfigurationList;
@@ -1997,6 +2012,7 @@
 				F2E967CE190BB1F100D0C1FF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

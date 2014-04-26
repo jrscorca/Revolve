@@ -1,5 +1,5 @@
 //
-//  HelloWorldScene.h
+//  MainScene.h
 //  GameJame
 //
 //  Created by Joshua Scorca on 4/26/14.
@@ -16,11 +16,11 @@
 /**
  *  The main scene
  */
-@interface HelloWorldScene : CCScene
+@interface MainScene : CCScene
 
 // -----------------------------------------------------------------------
 
-+ (HelloWorldScene *)scene;
++ (MainScene *)scene;
 - (id)init;
 
 // -----------------------------------------------------------------------

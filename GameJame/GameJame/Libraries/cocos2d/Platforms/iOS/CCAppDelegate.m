@@ -78,13 +78,14 @@ const CGSize FIXED_SIZE = {568, 384};
 // Only valid for iOS 6+. NOT VALID for iOS 4 / 5.
 -(NSUInteger)supportedInterfaceOrientations
 {
-    if ([_screenOrientation isEqual:CCScreenOrientationLandscape])
+    if ([_screenOrientation isEqual:CCScreenOrientationPortrait])
     {
-        return UIInterfaceOrientationMaskLandscape;
+        return UIInterfaceOrientationMaskPortrait;
     }
     else
     {
         return UIInterfaceOrientationMaskPortrait | UIInterfaceOrientationMaskPortraitUpsideDown;
+        //return UIInterfaceOrientationMaskLandscapeLeft | UIInterfaceOrientationMaskLandscapeRight;
     }
 }
 
@@ -92,13 +93,13 @@ const CGSize FIXED_SIZE = {568, 384};
 // Only valid on iOS 4 / 5. NOT VALID for iOS 6.
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
-    if ([_screenOrientation isEqual:CCScreenOrientationLandscape])
+    if ([_screenOrientation isEqual:CCScreenOrientationPortrait])
     {
-        return UIInterfaceOrientationIsLandscape(interfaceOrientation);
+        return UIInterfaceOrientationIsPortrait(interfaceOrientation);
     }
     else
     {
-        return UIInterfaceOrientationIsPortrait(interfaceOrientation);
+        return UIInterfaceOrientationIsLandscape(interfaceOrientation);
     }
 }
 
@@ -257,7 +258,7 @@ FindPOTScale(CGFloat size, CGFloat fixedSize)
 	navController_ = [[CCNavigationController alloc] initWithRootViewController:director];
 	navController_.navigationBarHidden = YES;
 	navController_.appDelegate = self;
-	navController_.screenOrientation = (config[CCSetupScreenOrientation] ?: CCScreenOrientationLandscape);
+	navController_.screenOrientation = (config[CCSetupScreenOrientation] ?: CCScreenOrientationPortrait);
     
 	// for rotation and other messages
 	[director setDelegate:navController_];
