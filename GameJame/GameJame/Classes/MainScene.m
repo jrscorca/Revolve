@@ -10,8 +10,10 @@
 #import "MainScene.h"
 #import "IntroScene.h"
 #import "Alien.h"
+#import "AlienGenerator.h"
+#import "EndGameScene.h"
 
-#define ROTATION_RATE_MODIFIER 50.0
+#define ROTATION_RATE_MODIFIER 15.0
 
 // -----------------------------------------------------------------------
 #pragma mark - MainScene
@@ -22,6 +24,10 @@
     CCSprite *_globe;
     CCSprite *_alien;
     CGPoint lastTouch;
+    AlienGenerator *alienGenerator;
+    float _rotationValue;
+    int score;
+    
 }
 
 // -----------------------------------------------------------------------
@@ -37,9 +43,12 @@
 
 - (id)init
 {
+
     // Apple recommend assigning self with supers return value
     self = [super init];
     if (!self) return(nil);
+    
+    alienGenerator = [[AlienGenerator alloc] init];
     
     // Enable touch handling on scene node
     self.userInteractionEnabled = YES;
@@ -53,13 +62,7 @@
     _globe.position  = ccp(self.contentSize.width/2,self.contentSize.height/2);
     NSLog(@"%f, %f", _globe.position.x, _globe.position.y);
     [self addChild:_globe];
-    
-    
-    // Add a sprite
-    _alien = [CCSprite spriteWithImageNamed:@"Alien.png"];
-    _alien.position  = ccp(100,100);
-    NSLog(@"%f, %f", _alien.position.x, _alien.position.y);
-    [self addChild:_alien];
+
     
     // Animate sprite with action
     //CCActionRotateBy* actionSpin = [CCActionRotateBy actionWithDuration:1.5f angle:360];
@@ -73,9 +76,38 @@
     [backButton setTarget:self selector:@selector(onBackClicked:)];
     [self addChild:backButton];
      */
+    
+    score = 0;
+
+    NSAttributedString *aString = [[NSAttributedString alloc] initWithString:[NSString stringWithFormat:@"%d",score]];
+    
+    _scoreLabel = [[CCLabelTTF alloc] initWithAttributedString:aString];
+    _scoreLabel.fontSize = 40;
+    _scoreLabel.positionType = CCPositionTypeNormalized;
+    _scoreLabel.position = ccp(0.5f, 0.95f);
+
+    [self addChild:_scoreLabel];
 
     // done
+    
+    
+    
 	return self;
+}
+
+-(void)updateScore{
+    score++;
+    _scoreLabel.string = [NSString stringWithFormat:@"%d",score];
+}
+
+-(void)playerLost{
+    int S =[[NSUserDefaults standardUserDefaults] integerForKey:@"scoreCount"];
+    if(score > S){
+        [[NSUserDefaults standardUserDefaults] setInteger:score forKey:@"scoreCount"];
+    }
+    [[NSUserDefaults standardUserDefaults] synchronize];
+    [[CCDirector sharedDirector] replaceScene:[EndGameScene sceneWithScore:score]
+                               withTransition:[CCTransition transitionPushWithDirection:CCTransitionDirectionLeft duration:1.0f]];
 }
 
 // -----------------------------------------------------------------------
@@ -93,7 +125,8 @@
 {
     // always call super onEnter first
     [super onEnter];
-    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(updateScore) name:@"updateScoreNotification" object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(playerLost) name:@"playerLostNotification" object:nil];
     // In pre-v3, touch enable and scheduleUpdate was called here
     // In v3, touch is enabled by setting userInterActionEnabled for the individual nodes
     // Per frame update is automatically enabled, if update is overridden
@@ -106,11 +139,20 @@
 {
     // always call super onExit last
     [super onExit];
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:@"updateScoreNotification" object:nil];
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:@"playerLostNotification" object:nil];
 }
 
 
 -(void)update:(CCTime)delta{
-    //[super update:delta];
+     Alien * alien = [alienGenerator update:delta];
+    if(alien){
+        [self addChild:alien];
+    }
+    [alienGenerator rotateSubmergedAliens:_rotationValue];
+    _rotationValue = 0;
+    
+
     
 }
 
@@ -139,9 +181,10 @@
         return;
     }
     
-    [self rotateWithXValue:touch];
-    [self rotateWithYValue:touch];
+    float rotationValueX = [self rotateWithXValue:touch];
+    float rotationValueY = [self rotateWithYValue:touch];
     
+    _rotationValue = rotationValueX+rotationValueY;
 
     
     lastTouch = touchLoc;
@@ -150,47 +193,40 @@
 
 }
 
--(void)rotateWithXValue:(UITouch*)touch{
+-(float)rotateWithXValue:(UITouch*)touch{
         CGPoint touchLoc = [touch locationInNode:self];
     if (lastTouch.x - touchLoc.x < 0 && touchLoc.y >= self.contentSize.height/2) {
-        //rotate clockwise
-        _globe.rotation -= (lastTouch.x - touchLoc.x)/ROTATION_RATE_MODIFIER;
-        NSLog(@"Rotate Clockwise");
+        _globe.rotation += -(lastTouch.x - touchLoc.x)/ROTATION_RATE_MODIFIER;
+        return -(lastTouch.x - touchLoc.x)/ROTATION_RATE_MODIFIER;
     }else if (lastTouch.x - touchLoc.x >= 0 && touchLoc.y < self.contentSize.height/2) {
-        //rotate clockwise
-        NSLog(@"Rotate Clockwise");
         _globe.rotation += (lastTouch.x - touchLoc.x)/ROTATION_RATE_MODIFIER;
+        return (lastTouch.x - touchLoc.x)/ROTATION_RATE_MODIFIER;
     }else if (lastTouch.x - touchLoc.x >= 0 && touchLoc.y >= self.contentSize.height/2) {
-        //rotate counter-clockwise
-        NSLog(@"Rotate Counter-Clockwise");
-        _globe.rotation -= (lastTouch.x - touchLoc.x)/ROTATION_RATE_MODIFIER;
+        _globe.rotation += -(lastTouch.x - touchLoc.x)/ROTATION_RATE_MODIFIER;
+        return -(lastTouch.x - touchLoc.x)/ROTATION_RATE_MODIFIER;
     }else if (lastTouch.x - touchLoc.x < 0 && touchLoc.y < self.contentSize.height/2) {
-        //rotate counter-clockwise
         _globe.rotation += (lastTouch.x - touchLoc.x)/ROTATION_RATE_MODIFIER;
-        NSLog(@"Rotate Counter-Clockwise");
+        return (lastTouch.x - touchLoc.x)/ROTATION_RATE_MODIFIER;
     }
+    return 0;
 }
 
--(void)rotateWithYValue:(UITouch*)touch{
+-(float)rotateWithYValue:(UITouch*)touch{
     CGPoint touchLoc = [touch locationInNode:self];
     if (lastTouch.y - touchLoc.y < 0 && touchLoc.x >= self.contentSize.width/2) {
-        //rotate clockwise
         _globe.rotation += (lastTouch.y - touchLoc.y)/ROTATION_RATE_MODIFIER;
-        NSLog(@"Rotate Clockwise");
+        return (lastTouch.y - touchLoc.y)/ROTATION_RATE_MODIFIER;
     }else if (lastTouch.y - touchLoc.y >= 0 && touchLoc.x < self.contentSize.width/2) {
-        //rotate clockwise
-        NSLog(@"Rotate Clockwise");
-        _globe.rotation -= (lastTouch.y - touchLoc.y)/ROTATION_RATE_MODIFIER;
+        _globe.rotation += -(lastTouch.y - touchLoc.y)/ROTATION_RATE_MODIFIER;
+        return -(lastTouch.y - touchLoc.y)/ROTATION_RATE_MODIFIER;
     }else if (lastTouch.y - touchLoc.y >= 0 && touchLoc.x >= self.contentSize.width/2) {
-        //rotate clockwise
-        NSLog(@"Rotate Clockwise");
         _globe.rotation += (lastTouch.y - touchLoc.y)/ROTATION_RATE_MODIFIER;
+        return (lastTouch.y - touchLoc.y)/ROTATION_RATE_MODIFIER;;
     }else if (lastTouch.y - touchLoc.y < 0 && touchLoc.x < self.contentSize.width/2) {
-        //rotate counter-clockwise
-        _globe.rotation -= (lastTouch.y - touchLoc.y)/ROTATION_RATE_MODIFIER;
-        NSLog(@"Rotate Counter-Clockwise");
+        _globe.rotation += -(lastTouch.y - touchLoc.y)/ROTATION_RATE_MODIFIER;
+        return -(lastTouch.y - touchLoc.y)/ROTATION_RATE_MODIFIER;;
     }
-    
+    return 0;
 }
 
 // -----------------------------------------------------------------------

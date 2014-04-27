@@ -9,8 +9,12 @@
 #import <UIKit/UIKit.h>
 #import "cocos2d.h"
 
+@class AlienGenerator;
 @interface Alien : CCSprite
 
 @property (nonatomic, assign) CGPoint velocity;
+@property (nonatomic, weak) AlienGenerator *parentGenerator;
+@property (nonatomic, assign) float relative_rotation;
+@property (nonatomic, assign) BOOL submerged;
 
 @end

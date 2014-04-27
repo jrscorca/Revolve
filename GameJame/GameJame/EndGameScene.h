@@ -8,9 +8,15 @@
 
 #import <Foundation/Foundation.h>
 #import "cocos2d.h"
+#import "cocos2d-ui.h"
 
-@interface EndGameScene : CCNode {
+@interface EndGameScene : CCScene {
     
 }
+
+@property (nonatomic, strong) CCLabelTTF *scoreLabel;
+
++ (EndGameScene *)sceneWithScore:(int)score;
+- (id)init;
 
 @end

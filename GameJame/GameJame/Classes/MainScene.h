@@ -20,6 +20,8 @@
 
 // -----------------------------------------------------------------------
 
+@property (nonatomic, strong) CCLabelTTF *scoreLabel;
+
 + (MainScene *)scene;
 - (id)init;
 

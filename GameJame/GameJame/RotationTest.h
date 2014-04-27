@@ -7,7 +7,17 @@
 //
 
 #import <Foundation/Foundation.h>
-
-@interface RotationTest : NSObject
+#import "cocos2d.h"
+@interface RotationTest : CCNode
+{
+    CCSprite *star;
+    CCSprite *planet;
+    
+    float dist_star_planet;
+    float dist_planet_satellite;
+    
+    float relative_angle_star_planet;
+    float relative_angle_planet_satellite;
+}
 
 @end

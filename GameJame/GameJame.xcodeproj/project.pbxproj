@@ -215,6 +215,9 @@
 		F2E967D0190C1C8800D0C1FF /* Globe-ipadhd.png in Resources */ = {isa = PBXBuildFile; fileRef = F2E967CF190C1C8800D0C1FF /* Globe-ipadhd.png */; };
 		F2E967D3190C2AEA00D0C1FF /* Alien.m in Sources */ = {isa = PBXBuildFile; fileRef = F2E967D2190C2AEA00D0C1FF /* Alien.m */; };
 		F2E967D5190C2D0300D0C1FF /* Alien-ipadhd.png in Resources */ = {isa = PBXBuildFile; fileRef = F2E967D4190C2D0300D0C1FF /* Alien-ipadhd.png */; };
+		F2E967D8190C2E8E00D0C1FF /* AlienGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = F2E967D7190C2E8E00D0C1FF /* AlienGenerator.m */; };
+		F2E967DB190C66C500D0C1FF /* RotationTest.m in Sources */ = {isa = PBXBuildFile; fileRef = F2E967DA190C66C500D0C1FF /* RotationTest.m */; };
+		F2E967DE190CA41B00D0C1FF /* EndGameScene.m in Sources */ = {isa = PBXBuildFile; fileRef = F2E967DD190CA41B00D0C1FF /* EndGameScene.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -660,6 +663,12 @@
 		F2E967D1190C2AEA00D0C1FF /* Alien.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Alien.h; sourceTree = "<group>"; };
 		F2E967D2190C2AEA00D0C1FF /* Alien.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Alien.m; sourceTree = "<group>"; };
 		F2E967D4190C2D0300D0C1FF /* Alien-ipadhd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Alien-ipadhd.png"; sourceTree = "<group>"; };
+		F2E967D6190C2E8E00D0C1FF /* AlienGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AlienGenerator.h; path = Classes/AlienGenerator.h; sourceTree = "<group>"; };
+		F2E967D7190C2E8E00D0C1FF /* AlienGenerator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AlienGenerator.m; path = Classes/AlienGenerator.m; sourceTree = "<group>"; };
+		F2E967D9190C66C500D0C1FF /* RotationTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RotationTest.h; sourceTree = "<group>"; };
+		F2E967DA190C66C500D0C1FF /* RotationTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RotationTest.m; sourceTree = "<group>"; };
+		F2E967DC190CA41B00D0C1FF /* EndGameScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EndGameScene.h; sourceTree = "<group>"; };
+		F2E967DD190CA41B00D0C1FF /* EndGameScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EndGameScene.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1557,6 +1566,12 @@
 				F2E967C5190BB1F100D0C1FF /* IntroScene.m */,
 				F2E967D1190C2AEA00D0C1FF /* Alien.h */,
 				F2E967D2190C2AEA00D0C1FF /* Alien.m */,
+				F2E967D6190C2E8E00D0C1FF /* AlienGenerator.h */,
+				F2E967D7190C2E8E00D0C1FF /* AlienGenerator.m */,
+				F2E967D9190C66C500D0C1FF /* RotationTest.h */,
+				F2E967DA190C66C500D0C1FF /* RotationTest.m */,
+				F2E967DC190CA41B00D0C1FF /* EndGameScene.h */,
+				F2E967DD190CA41B00D0C1FF /* EndGameScene.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -1672,6 +1687,7 @@
 				F2E966DD190BB1F100D0C1FF /* NSMutableArray+WeakReferences.m in Sources */,
 				F2E96657190BB1F000D0C1FF /* CCGLView.m in Sources */,
 				F2E96721190BB1F100D0C1FF /* mat4.c in Sources */,
+				F2E967D8190C2E8E00D0C1FF /* AlienGenerator.m in Sources */,
 				F2E9657D190BB1EF00D0C1FF /* CCAtlasNode.m in Sources */,
 				F2E966CB190BB1F100D0C1FF /* OpenALManager.m in Sources */,
 				F2E966D7190BB1F100D0C1FF /* IOSVersion.m in Sources */,
@@ -1680,6 +1696,7 @@
 				F2E965EA190BB1F000D0C1FF /* CCResponder.m in Sources */,
 				F2E96581190BB1EF00D0C1FF /* CCClippingNode.m in Sources */,
 				F2E96614190BB1F000D0C1FF /* CCSpriteBatchNode.m in Sources */,
+				F2E967DE190CA41B00D0C1FF /* EndGameScene.m in Sources */,
 				F2E96638190BB1F000D0C1FF /* CCTransition.m in Sources */,
 				F2E96617190BB1F000D0C1FF /* CCSpriteFrame.m in Sources */,
 				F2E965AB190BB1F000D0C1FF /* CCNodeColor.m in Sources */,
@@ -1711,6 +1728,7 @@
 				F2E96572190BB1EF00D0C1FF /* CCActionTween.m in Sources */,
 				F2E966E0190BB1F100D0C1FF /* NSMutableDictionary+WeakReferences.m in Sources */,
 				F2E965BD190BB1F000D0C1FF /* CCNode+Debug.m in Sources */,
+				F2E967DB190C66C500D0C1FF /* RotationTest.m in Sources */,
 				F2E96576190BB1EF00D0C1FF /* CCAnimation.m in Sources */,
 				F2E9671F190BB1F100D0C1FF /* mat3.c in Sources */,
 				F2E9662B190BB1F000D0C1FF /* CCTiledMap.m in Sources */,

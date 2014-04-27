@@ -7,7 +7,17 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "cocos2d.h"
 
+@class Alien;
 @interface AlienGenerator : NSObject
+
+@property (nonatomic, assign) float spawnRate;
+@property (nonatomic, strong) NSMutableArray* allAliens;
+@property (nonatomic, strong) NSMutableArray* submergedAliens;
+@property (nonatomic, strong) NSMutableArray* aliensToRemove;
+
+-(Alien*)update:(CCTime)delta;
+-(void)rotateSubmergedAliens:(float)rotationValue;
 
 @end
