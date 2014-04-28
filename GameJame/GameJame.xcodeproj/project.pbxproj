@@ -17,8 +17,6 @@
 		F2E96525190BB1EF00D0C1FF /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2E96524190BB1EF00D0C1FF /* CoreGraphics.framework */; };
 		F2E96527190BB1EF00D0C1FF /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2E96526190BB1EF00D0C1FF /* CoreText.framework */; };
 		F2E9652D190BB1EF00D0C1FF /* libObjectiveChipmunk.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F2E9652A190BB1EF00D0C1FF /* libObjectiveChipmunk.a */; };
-		F2E96531190BB1EF00D0C1FF /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = F2E96530190BB1EF00D0C1FF /* Default.png */; };
-		F2E96533190BB1EF00D0C1FF /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F2E96532190BB1EF00D0C1FF /* Default@2x.png */; };
 		F2E96535190BB1EF00D0C1FF /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F2E96534190BB1EF00D0C1FF /* Default-568h@2x.png */; };
 		F2E96537190BB1EF00D0C1FF /* Default-Landscape~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = F2E96536190BB1EF00D0C1FF /* Default-Landscape~ipad.png */; };
 		F2E9653A190BB1EF00D0C1FF /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = F2E96539190BB1EF00D0C1FF /* Icon.png */; };
@@ -214,10 +212,28 @@
 		F2E967C6190BB1F100D0C1FF /* IntroScene.m in Sources */ = {isa = PBXBuildFile; fileRef = F2E967C5190BB1F100D0C1FF /* IntroScene.m */; };
 		F2E967D0190C1C8800D0C1FF /* Globe-ipadhd.png in Resources */ = {isa = PBXBuildFile; fileRef = F2E967CF190C1C8800D0C1FF /* Globe-ipadhd.png */; };
 		F2E967D3190C2AEA00D0C1FF /* Alien.m in Sources */ = {isa = PBXBuildFile; fileRef = F2E967D2190C2AEA00D0C1FF /* Alien.m */; };
-		F2E967D5190C2D0300D0C1FF /* Alien-ipadhd.png in Resources */ = {isa = PBXBuildFile; fileRef = F2E967D4190C2D0300D0C1FF /* Alien-ipadhd.png */; };
 		F2E967D8190C2E8E00D0C1FF /* AlienGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = F2E967D7190C2E8E00D0C1FF /* AlienGenerator.m */; };
 		F2E967DB190C66C500D0C1FF /* RotationTest.m in Sources */ = {isa = PBXBuildFile; fileRef = F2E967DA190C66C500D0C1FF /* RotationTest.m */; };
 		F2E967DE190CA41B00D0C1FF /* EndGameScene.m in Sources */ = {isa = PBXBuildFile; fileRef = F2E967DD190CA41B00D0C1FF /* EndGameScene.m */; };
+		F2E967E5190CC6D900D0C1FF /* Heart-ipadhd.png in Resources */ = {isa = PBXBuildFile; fileRef = F2E967E3190CC6D900D0C1FF /* Heart-ipadhd.png */; };
+		F2E967E8190CCE3000D0C1FF /* Planet-ipadhd.png in Resources */ = {isa = PBXBuildFile; fileRef = F2E967E7190CCE3000D0C1FF /* Planet-ipadhd.png */; };
+		F2E967EF190CD47D00D0C1FF /* TheFinalFrontier-ipadhd.png in Resources */ = {isa = PBXBuildFile; fileRef = F2E967ED190CD47D00D0C1FF /* TheFinalFrontier-ipadhd.png */; };
+		F2E967F3190DAC6C00D0C1FF /* Alien-ipadhd.png in Resources */ = {isa = PBXBuildFile; fileRef = F2E967F1190DAC6C00D0C1FF /* Alien-ipadhd.png */; };
+		F2E967F4190DAC6C00D0C1FF /* Alien2-ipadhd.png in Resources */ = {isa = PBXBuildFile; fileRef = F2E967F2190DAC6C00D0C1FF /* Alien2-ipadhd.png */; };
+		F2E967F7190DB2FD00D0C1FF /* AlienB&W-ipadhd.png in Resources */ = {isa = PBXBuildFile; fileRef = F2E967F5190DB2FD00D0C1FF /* AlienB&W-ipadhd.png */; };
+		F2E967F8190DB2FD00D0C1FF /* AlienBasic-ipadhd.png in Resources */ = {isa = PBXBuildFile; fileRef = F2E967F6190DB2FD00D0C1FF /* AlienBasic-ipadhd.png */; };
+		F2E967FB190DBBD400D0C1FF /* Gradient-ipadhd.png in Resources */ = {isa = PBXBuildFile; fileRef = F2E967F9190DBBD400D0C1FF /* Gradient-ipadhd.png */; };
+		F2E967FC190DBBD400D0C1FF /* FinalFrontierFG-ipadhd.png in Resources */ = {isa = PBXBuildFile; fileRef = F2E967FA190DBBD400D0C1FF /* FinalFrontierFG-ipadhd.png */; };
+		F2E96803190DC71600D0C1FF /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = F2E96801190DC71600D0C1FF /* Default.png */; };
+		F2E96804190DC71600D0C1FF /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F2E96802190DC71600D0C1FF /* Default@2x.png */; };
+		F2E9680C190DD50700D0C1FF /* Alien2-ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = F2E96806190DD50700D0C1FF /* Alien2-ipad.png */; };
+		F2E9680D190DD50700D0C1FF /* AlienBasic-ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = F2E96807190DD50700D0C1FF /* AlienBasic-ipad.png */; };
+		F2E9680E190DD50700D0C1FF /* FinalFrontierFG-ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = F2E96808190DD50700D0C1FF /* FinalFrontierFG-ipad.png */; };
+		F2E9680F190DD50700D0C1FF /* Gradient-ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = F2E96809190DD50700D0C1FF /* Gradient-ipad.png */; };
+		F2E96810190DD50700D0C1FF /* Heart-ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = F2E9680A190DD50700D0C1FF /* Heart-ipad.png */; };
+		F2E96811190DD50700D0C1FF /* TheFinalFrontier-ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = F2E9680B190DD50700D0C1FF /* TheFinalFrontier-ipad.png */; };
+		F2E96813190DD58F00D0C1FF /* Planet-ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = F2E96812190DD58F00D0C1FF /* Planet-ipad.png */; };
+		F2E96815190DD5D400D0C1FF /* Globe-ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = F2E96814190DD5D400D0C1FF /* Globe-ipad.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -242,8 +258,6 @@
 		F2E96524190BB1EF00D0C1FF /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		F2E96526190BB1EF00D0C1FF /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
 		F2E9652A190BB1EF00D0C1FF /* libObjectiveChipmunk.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libObjectiveChipmunk.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		F2E96530190BB1EF00D0C1FF /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = Resources/Default.png; sourceTree = "<group>"; };
-		F2E96532190BB1EF00D0C1FF /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default@2x.png"; path = "Resources/Default@2x.png"; sourceTree = "<group>"; };
 		F2E96534190BB1EF00D0C1FF /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "Resources/Default-568h@2x.png"; sourceTree = "<group>"; };
 		F2E96536190BB1EF00D0C1FF /* Default-Landscape~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-Landscape~ipad.png"; path = "Resources/Default-Landscape~ipad.png"; sourceTree = "<group>"; };
 		F2E96539190BB1EF00D0C1FF /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Icon.png; path = Resources/Icons/Icon.png; sourceTree = "<group>"; };
@@ -662,13 +676,31 @@
 		F2E967CF190C1C8800D0C1FF /* Globe-ipadhd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Globe-ipadhd.png"; sourceTree = "<group>"; };
 		F2E967D1190C2AEA00D0C1FF /* Alien.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Alien.h; sourceTree = "<group>"; };
 		F2E967D2190C2AEA00D0C1FF /* Alien.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Alien.m; sourceTree = "<group>"; };
-		F2E967D4190C2D0300D0C1FF /* Alien-ipadhd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Alien-ipadhd.png"; sourceTree = "<group>"; };
 		F2E967D6190C2E8E00D0C1FF /* AlienGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AlienGenerator.h; path = Classes/AlienGenerator.h; sourceTree = "<group>"; };
 		F2E967D7190C2E8E00D0C1FF /* AlienGenerator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AlienGenerator.m; path = Classes/AlienGenerator.m; sourceTree = "<group>"; };
 		F2E967D9190C66C500D0C1FF /* RotationTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RotationTest.h; sourceTree = "<group>"; };
 		F2E967DA190C66C500D0C1FF /* RotationTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RotationTest.m; sourceTree = "<group>"; };
 		F2E967DC190CA41B00D0C1FF /* EndGameScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EndGameScene.h; sourceTree = "<group>"; };
 		F2E967DD190CA41B00D0C1FF /* EndGameScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EndGameScene.m; sourceTree = "<group>"; };
+		F2E967E3190CC6D900D0C1FF /* Heart-ipadhd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Heart-ipadhd.png"; sourceTree = "<group>"; };
+		F2E967E7190CCE3000D0C1FF /* Planet-ipadhd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Planet-ipadhd.png"; sourceTree = "<group>"; };
+		F2E967ED190CD47D00D0C1FF /* TheFinalFrontier-ipadhd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "TheFinalFrontier-ipadhd.png"; sourceTree = "<group>"; };
+		F2E967F1190DAC6C00D0C1FF /* Alien-ipadhd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Alien-ipadhd.png"; sourceTree = "<group>"; };
+		F2E967F2190DAC6C00D0C1FF /* Alien2-ipadhd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Alien2-ipadhd.png"; sourceTree = "<group>"; };
+		F2E967F5190DB2FD00D0C1FF /* AlienB&W-ipadhd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AlienB&W-ipadhd.png"; sourceTree = "<group>"; };
+		F2E967F6190DB2FD00D0C1FF /* AlienBasic-ipadhd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AlienBasic-ipadhd.png"; sourceTree = "<group>"; };
+		F2E967F9190DBBD400D0C1FF /* Gradient-ipadhd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Gradient-ipadhd.png"; sourceTree = "<group>"; };
+		F2E967FA190DBBD400D0C1FF /* FinalFrontierFG-ipadhd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "FinalFrontierFG-ipadhd.png"; sourceTree = "<group>"; };
+		F2E96801190DC71600D0C1FF /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		F2E96802190DC71600D0C1FF /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		F2E96806190DD50700D0C1FF /* Alien2-ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Alien2-ipad.png"; sourceTree = "<group>"; };
+		F2E96807190DD50700D0C1FF /* AlienBasic-ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AlienBasic-ipad.png"; sourceTree = "<group>"; };
+		F2E96808190DD50700D0C1FF /* FinalFrontierFG-ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "FinalFrontierFG-ipad.png"; sourceTree = "<group>"; };
+		F2E96809190DD50700D0C1FF /* Gradient-ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Gradient-ipad.png"; sourceTree = "<group>"; };
+		F2E9680A190DD50700D0C1FF /* Heart-ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Heart-ipad.png"; sourceTree = "<group>"; };
+		F2E9680B190DD50700D0C1FF /* TheFinalFrontier-ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "TheFinalFrontier-ipad.png"; sourceTree = "<group>"; };
+		F2E96812190DD58F00D0C1FF /* Planet-ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Planet-ipad.png"; sourceTree = "<group>"; };
+		F2E96814190DD5D400D0C1FF /* Globe-ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Globe-ipad.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -740,10 +772,19 @@
 		F2E9652F190BB1EF00D0C1FF /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				F2E967D4190C2D0300D0C1FF /* Alien-ipadhd.png */,
+				F2E96805190DD4FA00D0C1FF /* normal assets */,
+				F2E96801190DC71600D0C1FF /* Default.png */,
+				F2E96802190DC71600D0C1FF /* Default@2x.png */,
+				F2E967F9190DBBD400D0C1FF /* Gradient-ipadhd.png */,
+				F2E967FA190DBBD400D0C1FF /* FinalFrontierFG-ipadhd.png */,
+				F2E967F5190DB2FD00D0C1FF /* AlienB&W-ipadhd.png */,
+				F2E967F6190DB2FD00D0C1FF /* AlienBasic-ipadhd.png */,
+				F2E967ED190CD47D00D0C1FF /* TheFinalFrontier-ipadhd.png */,
+				F2E967E3190CC6D900D0C1FF /* Heart-ipadhd.png */,
+				F2E967E7190CCE3000D0C1FF /* Planet-ipadhd.png */,
+				F2E967F1190DAC6C00D0C1FF /* Alien-ipadhd.png */,
+				F2E967F2190DAC6C00D0C1FF /* Alien2-ipadhd.png */,
 				F2E967CF190C1C8800D0C1FF /* Globe-ipadhd.png */,
-				F2E96530190BB1EF00D0C1FF /* Default.png */,
-				F2E96532190BB1EF00D0C1FF /* Default@2x.png */,
 				F2E96534190BB1EF00D0C1FF /* Default-568h@2x.png */,
 				F2E96536190BB1EF00D0C1FF /* Default-Landscape~ipad.png */,
 				F2E96553190BB1EF00D0C1FF /* Info.plist */,
@@ -1576,6 +1617,21 @@
 			name = Classes;
 			sourceTree = "<group>";
 		};
+		F2E96805190DD4FA00D0C1FF /* normal assets */ = {
+			isa = PBXGroup;
+			children = (
+				F2E96814190DD5D400D0C1FF /* Globe-ipad.png */,
+				F2E96812190DD58F00D0C1FF /* Planet-ipad.png */,
+				F2E96806190DD50700D0C1FF /* Alien2-ipad.png */,
+				F2E96807190DD50700D0C1FF /* AlienBasic-ipad.png */,
+				F2E96808190DD50700D0C1FF /* FinalFrontierFG-ipad.png */,
+				F2E96809190DD50700D0C1FF /* Gradient-ipad.png */,
+				F2E9680A190DD50700D0C1FF /* Heart-ipad.png */,
+				F2E9680B190DD50700D0C1FF /* TheFinalFrontier-ipad.png */,
+			);
+			name = "normal assets";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1644,32 +1700,48 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F2E96533190BB1EF00D0C1FF /* Default@2x.png in Resources */,
 				F2E96546190BB1EF00D0C1FF /* Icon-120.png in Resources */,
 				F2E9674A190BB1F100D0C1FF /* LICENSE_CCBReader.txt in Resources */,
 				F2E9653C190BB1EF00D0C1FF /* Icon@2x.png in Resources */,
+				F2E96811190DD50700D0C1FF /* TheFinalFrontier-ipad.png in Resources */,
 				F2E9654E190BB1EF00D0C1FF /* Icon-Small@2x.png in Resources */,
+				F2E967F3190DAC6C00D0C1FF /* Alien-ipadhd.png in Resources */,
 				F2E96540190BB1EF00D0C1FF /* Icon-72@2x.png in Resources */,
-				F2E96531190BB1EF00D0C1FF /* Default.png in Resources */,
 				F2E9653A190BB1EF00D0C1FF /* Icon.png in Resources */,
 				F2E96548190BB1EF00D0C1FF /* Icon-iPad-Spotlight-iOS7@2x.png in Resources */,
+				F2E9680D190DD50700D0C1FF /* AlienBasic-ipad.png in Resources */,
+				F2E9680F190DD50700D0C1FF /* Gradient-ipad.png in Resources */,
+				F2E9680E190DD50700D0C1FF /* FinalFrontierFG-ipad.png in Resources */,
 				F2E96537190BB1EF00D0C1FF /* Default-Landscape~ipad.png in Resources */,
 				F2E9654C190BB1EF00D0C1FF /* Icon-Small.png in Resources */,
+				F2E96803190DC71600D0C1FF /* Default.png in Resources */,
 				F2E9654A190BB1EF00D0C1FF /* Icon-Small-50.png in Resources */,
+				F2E967F7190DB2FD00D0C1FF /* AlienB&W-ipadhd.png in Resources */,
 				F2E96733190BB1F100D0C1FF /* LICENSE_Kazmath.txt in Resources */,
 				F2E9653E190BB1EF00D0C1FF /* Icon-72.png in Resources */,
+				F2E967FB190DBBD400D0C1FF /* Gradient-ipadhd.png in Resources */,
 				F2E9668C190BB1F000D0C1FF /* LICENSE_cocos2d.txt in Resources */,
 				F2E96535190BB1EF00D0C1FF /* Default-568h@2x.png in Resources */,
+				F2E9680C190DD50700D0C1FF /* Alien2-ipad.png in Resources */,
 				F2E96555190BB1EF00D0C1FF /* iTunesArtwork in Resources */,
 				F2E96550190BB1EF00D0C1FF /* Icon-Spotlight-iOS7.png in Resources */,
 				F2E96544190BB1EF00D0C1FF /* Icon-76@2x.png in Resources */,
+				F2E967F4190DAC6C00D0C1FF /* Alien2-ipadhd.png in Resources */,
+				F2E96815190DD5D400D0C1FF /* Globe-ipad.png in Resources */,
+				F2E967E8190CCE3000D0C1FF /* Planet-ipadhd.png in Resources */,
+				F2E96810190DD50700D0C1FF /* Heart-ipad.png in Resources */,
 				F2E967B8190BB1F100D0C1FF /* LICENSE_Chipmunk.txt in Resources */,
 				F2E96552190BB1EF00D0C1FF /* Icon-Spotlight-iOS7@2x.png in Resources */,
-				F2E967D5190C2D0300D0C1FF /* Alien-ipadhd.png in Resources */,
 				F2E96542190BB1EF00D0C1FF /* Icon-76.png in Resources */,
+				F2E96804190DC71600D0C1FF /* Default@2x.png in Resources */,
 				F2E967D0190C1C8800D0C1FF /* Globe-ipadhd.png in Resources */,
 				F2E96718190BB1F100D0C1FF /* ChangeLog in Resources */,
+				F2E967F8190DB2FD00D0C1FF /* AlienBasic-ipadhd.png in Resources */,
+				F2E967FC190DBBD400D0C1FF /* FinalFrontierFG-ipadhd.png in Resources */,
+				F2E96813190DD58F00D0C1FF /* Planet-ipad.png in Resources */,
+				F2E967EF190CD47D00D0C1FF /* TheFinalFrontier-ipadhd.png in Resources */,
 				F2E96557190BB1EF00D0C1FF /* iTunesArtwork@2x in Resources */,
+				F2E967E5190CC6D900D0C1FF /* Heart-ipadhd.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

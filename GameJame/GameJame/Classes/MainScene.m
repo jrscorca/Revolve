@@ -21,12 +21,16 @@
 
 @implementation MainScene
 {
+    CCSprite *_heart;
+    CCSprite *_heart2;
     CCSprite *_globe;
     CCSprite *_alien;
     CGPoint lastTouch;
     AlienGenerator *alienGenerator;
     float _rotationValue;
     int score;
+    BOOL waitForStart;
+    CCLabelTTF *tapToPlay;
     
 }
 
@@ -47,35 +51,80 @@
     // Apple recommend assigning self with supers return value
     self = [super init];
     if (!self) return(nil);
-    
+    waitForStart = YES;
     alienGenerator = [[AlienGenerator alloc] init];
     
     // Enable touch handling on scene node
     self.userInteractionEnabled = YES;
     
-    // Create a colored background (Dark Grey)
-    CCNodeColor *background = [CCNodeColor nodeWithColor:[CCColor colorWithRed:0.2f green:0.2f blue:0.2f alpha:1.0f]];
+    
+    // Add a sprite
+    CCSprite *background = [CCSprite spriteWithImageNamed:@"TheFinalFrontier.png"];
+    background.position  = ccp(self.contentSize.width/2,self.contentSize.height/2);
+    NSLog(@"%f, %f", background.position.x, _globe.position.y);
     [self addChild:background];
     
     // Add a sprite
-    _globe = [CCSprite spriteWithImageNamed:@"Globe.png"];
+    _globe = [CCSprite spriteWithImageNamed:@"Planet.png"];
     _globe.position  = ccp(self.contentSize.width/2,self.contentSize.height/2);
     NSLog(@"%f, %f", _globe.position.x, _globe.position.y);
     [self addChild:_globe];
-
     
+    CCSprite *gradient = [CCSprite spriteWithImageNamed:@"Gradient.png"];
+    gradient.position  = ccp(self.contentSize.width/2,gradient.contentSize.height/2);
+    [self addChild:gradient];
+    
+    CCSprite *FFFG = [CCSprite spriteWithImageNamed:@"FinalFrontierFG.png"];
+    FFFG.position  = ccp(self.contentSize.width/2,self.contentSize.height/2);
+    [self addChild:FFFG];
+    
+    
+    
+    
+    
+    
+    /*
+    CCNodeColor *equator = [CCNodeColor nodeWithColor:[CCColor colorWithRed:255.0f green:0.2f blue:0.2f alpha:0.4f]];
+    equator.positionType = CCPositionTypeNormalized;
+    equator.position = ccp(0.08f, 0.5f);
+    [equator setContentSize:CGSizeMake(_globe.contentSize.width*.9, 4)];
+    [self addChild:equator];
+    */
+    _heart = [CCSprite spriteWithImageNamed:@"Heart.png"];
+    _heart.position  = ccp(self.contentSize.width/2,self.contentSize.height/2);
+    NSLog(@"%f, %f", _heart.position.x, _heart.position.y);
+    [self addChild:_heart];
+    /*
+    _heart2 = [CCSprite spriteWithImageNamed:@"Heart2.png"];
+    _heart2.position  = ccp(self.contentSize.width/2,self.contentSize.height/2);
+    NSLog(@"%f, %f", _heart2.position.x, _heart2.position.y);
+    [self addChild:_heart2];
+
+    */
     // Animate sprite with action
     //CCActionRotateBy* actionSpin = [CCActionRotateBy actionWithDuration:1.5f angle:360];
     //[_sprite runAction:[CCActionRepeatForever actionWithAction:actionSpin]];
     
-    // Create a back button
-    /*
-    CCButton *backButton = [CCButton buttonWithTitle:@"[ Menu ]" fontName:@"Verdana-Bold" fontSize:18.0f];
-    backButton.positionType = CCPositionTypeNormalized;
-    backButton.position = ccp(0.85f, 0.95f); // Top Right of screen
-    [backButton setTarget:self selector:@selector(onBackClicked:)];
-    [self addChild:backButton];
-     */
+    
+    
+    
+    
+    
+    tapToPlay = [[CCLabelTTF alloc] initWithString:@"ROTATE PLANET"  fontName:@"Helvetica" fontSize:50];
+    tapToPlay.positionType = CCPositionTypeNormalized;
+    tapToPlay.position = ccp(0.5f, 0.1f);
+    [self addChild:tapToPlay];
+    
+    CCActionFadeIn *fadeIn = [CCActionFadeIn actionWithDuration:1.0];
+    CCActionEaseIn *ease = [CCActionEaseIn actionWithAction:fadeIn rate:1.8];
+    CCActionFadeOut *fadeOut = [CCActionFadeOut actionWithDuration:1.0];
+    CCActionEaseOut *aa = [CCActionEaseOut actionWithAction:fadeOut rate:1.8];
+    CCActionSequence *seq = [CCActionSequence actionOne:ease two:aa];
+    
+    CCActionRepeatForever *repeat = [CCActionRepeatForever actionWithAction:seq];
+    
+    
+    [tapToPlay runAction:repeat];
     
     score = 0;
 
@@ -107,7 +156,7 @@
     }
     [[NSUserDefaults standardUserDefaults] synchronize];
     [[CCDirector sharedDirector] replaceScene:[EndGameScene sceneWithScore:score]
-                               withTransition:[CCTransition transitionPushWithDirection:CCTransitionDirectionLeft duration:1.0f]];
+                               withTransition:[CCTransition transitionPushWithDirection:CCTransitionDirectionUp duration:0.8f]];
 }
 
 // -----------------------------------------------------------------------
@@ -145,6 +194,8 @@
 
 
 -(void)update:(CCTime)delta{
+    if(waitForStart)return;
+    
      Alien * alien = [alienGenerator update:delta];
     if(alien){
         [self addChild:alien];
@@ -152,8 +203,13 @@
     [alienGenerator rotateSubmergedAliens:_rotationValue];
     _rotationValue = 0;
     
-
+   // [self animateHeart];
     
+}
+
+-(void)animateHeart{
+    _heart.visible = !_heart.visible;
+    _heart2.visible = !_heart2.visible;
 }
 
 // -----------------------------------------------------------------------
@@ -189,7 +245,8 @@
     
     lastTouch = touchLoc;
     
-
+    waitForStart = NO;
+    [tapToPlay removeFromParent];
 
 }
 

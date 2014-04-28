@@ -16,5 +16,6 @@
 @property (nonatomic, weak) AlienGenerator *parentGenerator;
 @property (nonatomic, assign) float relative_rotation;
 @property (nonatomic, assign) BOOL submerged;
+@property (nonatomic, assign) float redAlienModifier;
 
 @end

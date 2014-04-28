@@ -35,7 +35,8 @@
     if (!self) return(nil);
     
     // Create a colored background (Dark Grey)
-    CCNodeColor *background = [CCNodeColor nodeWithColor:[CCColor colorWithRed:0.2f green:0.2f blue:0.2f alpha:1.0f]];
+    CCSprite *background = [CCSprite spriteWithImageNamed:@"TheFinalFrontier.png"];
+    background.position  = ccp(self.contentSize.width/2,self.contentSize.height/2);
     [self addChild:background];
     
     // Hello world

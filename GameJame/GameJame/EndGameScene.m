@@ -18,11 +18,33 @@
 -(id)initWithScore:(int)currentScore{
     self = [super init];
     if (!self) return (nil);
-    CCButton *backButton = [CCButton buttonWithTitle:@"[ Retry ]" fontName:@"Verdana-Bold" fontSize:18.0f];
+    
+    
+    // Add a sprite
+    CCSprite *background = [CCSprite spriteWithImageNamed:@"TheFinalFrontier.png"];
+    background.position  = ccp(self.contentSize.width/2,self.contentSize.height/2);
+    [self addChild:background];
+    
+    
+    CCSprite *FFFG = [CCSprite spriteWithImageNamed:@"FinalFrontierFG.png"];
+    FFFG.position  = ccp(self.contentSize.width/2,self.contentSize.height/2);
+    [self addChild:FFFG];
+
+    
+    CCButton *backButton = [CCButton buttonWithTitle:@"[ Retry ]" fontName:@"Verdana-Bold" fontSize:46.0f];
     backButton.positionType = CCPositionTypeNormalized;
-    backButton.position = ccp(0.85f, 0.95f); // Top Right of screen
+    backButton.position = ccp(0.5f, 0.25f); // Top Right of screen
+    backButton.color = [[CCColor alloc] initWithCcColor3b:ccc3(200, 200, 200)];
     [backButton setTarget:self selector:@selector(onBackClicked:)];
     [self addChild:backButton];
+    
+    
+    CCLabelTTF *title = [[CCLabelTTF alloc] initWithString:@"Planet Destroyed" fontName:@"Helvetica" fontSize:66];
+    title.color = [[CCColor alloc] initWithCcColor3b:ccc3(200, 200, 200)];
+    title.positionType = CCPositionTypeNormalized;
+    title.position = ccp(0.5f, 0.90f);
+    [self addChild:title];
+    
     
     NSAttributedString *aString = [[NSAttributedString alloc] initWithString:[NSString stringWithFormat:@"%d",currentScore]];
     
@@ -39,14 +61,15 @@
     highScoreLabel.position = ccp(0.75f, 0.5f);
     [self addChild:highScoreLabel];
     
-    
     CCLabelTTF *label = [[CCLabelTTF alloc] initWithString:@"SCORE" fontName:@"Helvetica" fontSize:46];
     label.positionType = CCPositionTypeNormalized;
+    label.color = [[CCColor alloc] initWithCcColor3b:ccc3(200, 200, 200)];
     label.position = ccp(0.25f, 0.55f);
     [self addChild:label];
     
     CCLabelTTF *label2 = [[CCLabelTTF alloc] initWithString:@"HIGH SCORE" fontName:@"Helvetica" fontSize:46];
     label2.positionType = CCPositionTypeNormalized;
+    label2.color = [[CCColor alloc] initWithCcColor3b:ccc3(200, 200, 200)];
     label2.position = ccp(0.75f, 0.55f);
     [self addChild:label2];
     [[NSUserDefaults standardUserDefaults] synchronize];
@@ -57,7 +80,7 @@
 {
     // back to intro scene with transition
     [[CCDirector sharedDirector] replaceScene:[MainScene scene]
-                               withTransition:[CCTransition transitionPushWithDirection:CCTransitionDirectionRight duration:1.0f]];
+                               withTransition:[CCTransition transitionPushWithDirection:CCTransitionDirectionDown duration:1.0f]];
 }
 
 @end

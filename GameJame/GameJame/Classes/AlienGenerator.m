@@ -13,14 +13,18 @@
     CCTime timer;
     CGSize winSize;
     int scoreCount;
+    CCTime rampUpTimer;
+    int rateOfRed;
+    int debugCount;
 }
 
 -(id)init{
     self = [super init];
     if(!self) return (nil);
     winSize =  [[CCDirector sharedDirector] viewSize];
+    rateOfRed = 30;
     timer = 0;
-    _spawnRate = 0.6;
+    _spawnRate = .8;
     _allAliens = [[NSMutableArray alloc] init];
     _submergedAliens = [[NSMutableArray alloc] init];
     _aliensToRemove = [[NSMutableArray alloc] init];
@@ -29,11 +33,26 @@
 }
 
 -(Alien*)update:(CCTime)delta{
+    rampUpTimer+=delta;
     timer+= delta;
     [self removeAliens];
     if(timer >= _spawnRate){
         timer = 0;
         return [self spawnAlien];
+    }
+    
+    if(rampUpTimer>10){
+        debugCount++;
+        if (rateOfRed <17) {
+            _spawnRate = max(.01, _spawnRate-.01);
+            rateOfRed = max(2, rateOfRed-1);
+        }else{
+            _spawnRate = max(.2, _spawnRate-.1);
+            rateOfRed = max(14, rateOfRed-2);
+        }
+
+        rampUpTimer = 0;
+        NSLog(@"%d", debugCount);
     }
     
     return nil;
@@ -45,7 +64,7 @@
         [_submergedAliens removeObject:alien];
         [alien removeFromParent];
         scoreCount++;
-        [[NSNotificationCenter defaultCenter] postNotificationName:@"updateScoreNotification" object:nil];
+        
     }
     [_aliensToRemove removeAllObjects];
 }
@@ -77,7 +96,12 @@
     float radians = alien.rotation*(M_PI/180.0);
     alien.relative_rotation = radians;
     
-    
+    int rand = arc4random() % rateOfRed;
+    if(rand%40 == 0){
+        alien.redAlienModifier = 1.8;
+        CCTexture *tex = [CCTexture textureWithFile:@"Alien2.png"];
+        [alien setTexture: tex];
+    }
     [_allAliens addObject:alien];
     return alien;
 }
@@ -88,7 +112,7 @@
         float radians = rotationValue*(M_PI/180.0);
         alien.anchorPoint = ccp(0.5f,0.5f);
         alien.rotation += rotationValue;
-        NSLog(@"%f", alien.rotation);
+        //NSLog(@"%f", alien.rotation);
         
         float d = ccpDistance(alien.position, ccp(winSize.width/2, winSize.height/2));
 
