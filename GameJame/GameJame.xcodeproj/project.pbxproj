@@ -727,7 +727,7 @@
 		F2E9650A190BB1EF00D0C1FF = {
 			isa = PBXGroup;
 			children = (
-				F2E9652E190BB1EF00D0C1FF /* GameJame */,
+				F2E9652E190BB1EF00D0C1FF /* Revolve */,
 				F2E96515190BB1EF00D0C1FF /* Frameworks */,
 				F2E96514190BB1EF00D0C1FF /* Products */,
 			);
@@ -758,7 +758,7 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		F2E9652E190BB1EF00D0C1FF /* GameJame */ = {
+		F2E9652E190BB1EF00D0C1FF /* Revolve */ = {
 			isa = PBXGroup;
 			children = (
 				F2E9652F190BB1EF00D0C1FF /* Resources */,
@@ -766,6 +766,7 @@
 				F2E967BD190BB1F100D0C1FF /* Classes */,
 				F2E967B9190BB1F100D0C1FF /* Supporting Files */,
 			);
+			name = Revolve;
 			path = GameJame;
 			sourceTree = "<group>";
 		};
