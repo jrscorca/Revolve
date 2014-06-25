@@ -10,7 +10,7 @@
 #import "MainScene.h"
 #import "IntroScene.h"
 #import "Alien.h"
-#import "AlienGenerator.h"
+#import "SpaceDwellerGenerator.h"
 #import "EndGameScene.h"
 
 #define ROTATION_RATE_MODIFIER 15.0
@@ -26,7 +26,7 @@
     CCSprite *_globe;
     CCSprite *_alien;
     CGPoint lastTouch;
-    AlienGenerator *alienGenerator;
+    SpaceDwellerGenerator *spaceDwellerGenerator;
     float _rotationValue;
     int score;
     BOOL waitForStart;
@@ -52,7 +52,7 @@
     self = [super init];
     if (!self) return(nil);
     waitForStart = YES;
-    alienGenerator = [[AlienGenerator alloc] init];
+    spaceDwellerGenerator = [[SpaceDwellerGenerator alloc] init];
     
     // Enable touch handling on scene node
     self.userInteractionEnabled = YES;
@@ -196,11 +196,11 @@
 -(void)update:(CCTime)delta{
     if(waitForStart)return;
     
-     Alien * alien = [alienGenerator update:delta];
+     Alien * alien = [spaceDwellerGenerator update:delta];
     if(alien){
         [self addChild:alien];
     }
-    [alienGenerator rotateSubmergedAliens:_rotationValue];
+    [spaceDwellerGenerator rotateSubmergedAliens:_rotationValue];
     _rotationValue = 0;
     
    // [self animateHeart];

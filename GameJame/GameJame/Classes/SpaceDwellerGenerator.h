@@ -10,7 +10,7 @@
 #import "cocos2d.h"
 
 @class Alien;
-@interface AlienGenerator : NSObject
+@interface SpaceDwellerGenerator : NSObject
 
 @property (nonatomic, assign) float spawnRate;
 @property (nonatomic, strong) NSMutableArray* allAliens;

@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F23217A3195A5E8600CE4D94 /* PowerUp.m in Sources */ = {isa = PBXBuildFile; fileRef = F23217A2195A5E8600CE4D94 /* PowerUp.m */; };
+		F28DE9841953B9510081FA46 /* BlackAlien.m in Sources */ = {isa = PBXBuildFile; fileRef = F28DE9831953B9510081FA46 /* BlackAlien.m */; };
+		F28DE9871953B9900081FA46 /* PurpleAlien.m in Sources */ = {isa = PBXBuildFile; fileRef = F28DE9861953B9900081FA46 /* PurpleAlien.m */; };
+		F28DE98A1953B9AC0081FA46 /* GreenAlien.m in Sources */ = {isa = PBXBuildFile; fileRef = F28DE9891953B9AC0081FA46 /* GreenAlien.m */; };
+		F28DE98D1953B9BC0081FA46 /* RedAlien.m in Sources */ = {isa = PBXBuildFile; fileRef = F28DE98C1953B9BC0081FA46 /* RedAlien.m */; };
+		F28DE9901953BA1C0081FA46 /* SpaceDweller.m in Sources */ = {isa = PBXBuildFile; fileRef = F28DE98F1953BA1C0081FA46 /* SpaceDweller.m */; };
+		F28DE9931953C1350081FA46 /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = F28DE9921953C1350081FA46 /* Constants.m */; };
 		F2E96517190BB1EF00D0C1FF /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2E96516190BB1EF00D0C1FF /* QuartzCore.framework */; };
 		F2E96519190BB1EF00D0C1FF /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2E96518190BB1EF00D0C1FF /* OpenGLES.framework */; };
 		F2E9651B190BB1EF00D0C1FF /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2E9651A190BB1EF00D0C1FF /* OpenAL.framework */; };
@@ -212,7 +219,7 @@
 		F2E967C6190BB1F100D0C1FF /* IntroScene.m in Sources */ = {isa = PBXBuildFile; fileRef = F2E967C5190BB1F100D0C1FF /* IntroScene.m */; };
 		F2E967D0190C1C8800D0C1FF /* Globe-ipadhd.png in Resources */ = {isa = PBXBuildFile; fileRef = F2E967CF190C1C8800D0C1FF /* Globe-ipadhd.png */; };
 		F2E967D3190C2AEA00D0C1FF /* Alien.m in Sources */ = {isa = PBXBuildFile; fileRef = F2E967D2190C2AEA00D0C1FF /* Alien.m */; };
-		F2E967D8190C2E8E00D0C1FF /* AlienGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = F2E967D7190C2E8E00D0C1FF /* AlienGenerator.m */; };
+		F2E967D8190C2E8E00D0C1FF /* SpaceDwellerGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = F2E967D7190C2E8E00D0C1FF /* SpaceDwellerGenerator.m */; };
 		F2E967DB190C66C500D0C1FF /* RotationTest.m in Sources */ = {isa = PBXBuildFile; fileRef = F2E967DA190C66C500D0C1FF /* RotationTest.m */; };
 		F2E967DE190CA41B00D0C1FF /* EndGameScene.m in Sources */ = {isa = PBXBuildFile; fileRef = F2E967DD190CA41B00D0C1FF /* EndGameScene.m */; };
 		F2E967E5190CC6D900D0C1FF /* Heart-ipadhd.png in Resources */ = {isa = PBXBuildFile; fileRef = F2E967E3190CC6D900D0C1FF /* Heart-ipadhd.png */; };
@@ -247,6 +254,20 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F23217A1195A5E8600CE4D94 /* PowerUp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PowerUp.h; sourceTree = "<group>"; };
+		F23217A2195A5E8600CE4D94 /* PowerUp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PowerUp.m; sourceTree = "<group>"; };
+		F28DE9821953B9510081FA46 /* BlackAlien.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlackAlien.h; sourceTree = "<group>"; };
+		F28DE9831953B9510081FA46 /* BlackAlien.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BlackAlien.m; sourceTree = "<group>"; };
+		F28DE9851953B9900081FA46 /* PurpleAlien.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PurpleAlien.h; sourceTree = "<group>"; };
+		F28DE9861953B9900081FA46 /* PurpleAlien.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PurpleAlien.m; sourceTree = "<group>"; };
+		F28DE9881953B9AC0081FA46 /* GreenAlien.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GreenAlien.h; sourceTree = "<group>"; };
+		F28DE9891953B9AC0081FA46 /* GreenAlien.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GreenAlien.m; sourceTree = "<group>"; };
+		F28DE98B1953B9BC0081FA46 /* RedAlien.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RedAlien.h; sourceTree = "<group>"; };
+		F28DE98C1953B9BC0081FA46 /* RedAlien.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RedAlien.m; sourceTree = "<group>"; };
+		F28DE98E1953BA1C0081FA46 /* SpaceDweller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpaceDweller.h; sourceTree = "<group>"; };
+		F28DE98F1953BA1C0081FA46 /* SpaceDweller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpaceDweller.m; sourceTree = "<group>"; };
+		F28DE9911953C1350081FA46 /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
+		F28DE9921953C1350081FA46 /* Constants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Constants.m; sourceTree = "<group>"; };
 		F2E96513190BB1EF00D0C1FF /* GameJame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GameJame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F2E96516190BB1EF00D0C1FF /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		F2E96518190BB1EF00D0C1FF /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
@@ -676,8 +697,8 @@
 		F2E967CF190C1C8800D0C1FF /* Globe-ipadhd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Globe-ipadhd.png"; sourceTree = "<group>"; };
 		F2E967D1190C2AEA00D0C1FF /* Alien.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Alien.h; sourceTree = "<group>"; };
 		F2E967D2190C2AEA00D0C1FF /* Alien.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Alien.m; sourceTree = "<group>"; };
-		F2E967D6190C2E8E00D0C1FF /* AlienGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AlienGenerator.h; path = Classes/AlienGenerator.h; sourceTree = "<group>"; };
-		F2E967D7190C2E8E00D0C1FF /* AlienGenerator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AlienGenerator.m; path = Classes/AlienGenerator.m; sourceTree = "<group>"; };
+		F2E967D6190C2E8E00D0C1FF /* SpaceDwellerGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SpaceDwellerGenerator.h; path = Classes/SpaceDwellerGenerator.h; sourceTree = "<group>"; };
+		F2E967D7190C2E8E00D0C1FF /* SpaceDwellerGenerator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SpaceDwellerGenerator.m; path = Classes/SpaceDwellerGenerator.m; sourceTree = "<group>"; };
 		F2E967D9190C66C500D0C1FF /* RotationTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RotationTest.h; sourceTree = "<group>"; };
 		F2E967DA190C66C500D0C1FF /* RotationTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RotationTest.m; sourceTree = "<group>"; };
 		F2E967DC190CA41B00D0C1FF /* EndGameScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EndGameScene.h; sourceTree = "<group>"; };
@@ -724,6 +745,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F23217A4195B621B00CE4D94 /* SpaceDwellers */ = {
+			isa = PBXGroup;
+			children = (
+				F2E967D1190C2AEA00D0C1FF /* Alien.h */,
+				F2E967D2190C2AEA00D0C1FF /* Alien.m */,
+				F28DE9821953B9510081FA46 /* BlackAlien.h */,
+				F28DE9831953B9510081FA46 /* BlackAlien.m */,
+				F28DE9851953B9900081FA46 /* PurpleAlien.h */,
+				F28DE9861953B9900081FA46 /* PurpleAlien.m */,
+				F28DE9881953B9AC0081FA46 /* GreenAlien.h */,
+				F28DE9891953B9AC0081FA46 /* GreenAlien.m */,
+				F28DE98B1953B9BC0081FA46 /* RedAlien.h */,
+				F28DE98C1953B9BC0081FA46 /* RedAlien.m */,
+				F28DE98E1953BA1C0081FA46 /* SpaceDweller.h */,
+				F28DE98F1953BA1C0081FA46 /* SpaceDweller.m */,
+				F23217A1195A5E8600CE4D94 /* PowerUp.h */,
+				F23217A2195A5E8600CE4D94 /* PowerUp.m */,
+			);
+			name = SpaceDwellers;
+			sourceTree = "<group>";
+		};
 		F2E9650A190BB1EF00D0C1FF = {
 			isa = PBXGroup;
 			children = (
@@ -1593,6 +1635,8 @@
 			children = (
 				F2E967BA190BB1F100D0C1FF /* Prefix.pch */,
 				F2E967BB190BB1F100D0C1FF /* main.m */,
+				F28DE9911953C1350081FA46 /* Constants.h */,
+				F28DE9921953C1350081FA46 /* Constants.m */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -1600,16 +1644,15 @@
 		F2E967BD190BB1F100D0C1FF /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				F23217A4195B621B00CE4D94 /* SpaceDwellers */,
+				F2E967D6190C2E8E00D0C1FF /* SpaceDwellerGenerator.h */,
+				F2E967D7190C2E8E00D0C1FF /* SpaceDwellerGenerator.m */,
 				F2E967BE190BB1F100D0C1FF /* AppDelegate.h */,
 				F2E967BF190BB1F100D0C1FF /* AppDelegate.m */,
 				F2E967C1190BB1F100D0C1FF /* MainScene.h */,
 				F2E967C2190BB1F100D0C1FF /* MainScene.m */,
 				F2E967C4190BB1F100D0C1FF /* IntroScene.h */,
 				F2E967C5190BB1F100D0C1FF /* IntroScene.m */,
-				F2E967D1190C2AEA00D0C1FF /* Alien.h */,
-				F2E967D2190C2AEA00D0C1FF /* Alien.m */,
-				F2E967D6190C2E8E00D0C1FF /* AlienGenerator.h */,
-				F2E967D7190C2E8E00D0C1FF /* AlienGenerator.m */,
 				F2E967D9190C66C500D0C1FF /* RotationTest.h */,
 				F2E967DA190C66C500D0C1FF /* RotationTest.m */,
 				F2E967DC190CA41B00D0C1FF /* EndGameScene.h */,
@@ -1760,13 +1803,14 @@
 				F2E966DD190BB1F100D0C1FF /* NSMutableArray+WeakReferences.m in Sources */,
 				F2E96657190BB1F000D0C1FF /* CCGLView.m in Sources */,
 				F2E96721190BB1F100D0C1FF /* mat4.c in Sources */,
-				F2E967D8190C2E8E00D0C1FF /* AlienGenerator.m in Sources */,
+				F2E967D8190C2E8E00D0C1FF /* SpaceDwellerGenerator.m in Sources */,
 				F2E9657D190BB1EF00D0C1FF /* CCAtlasNode.m in Sources */,
 				F2E966CB190BB1F100D0C1FF /* OpenALManager.m in Sources */,
 				F2E966D7190BB1F100D0C1FF /* IOSVersion.m in Sources */,
 				F2E9658C190BB1EF00D0C1FF /* CCDirector.m in Sources */,
 				F2E966F7190BB1F100D0C1FF /* CCScrollView.m in Sources */,
 				F2E965EA190BB1F000D0C1FF /* CCResponder.m in Sources */,
+				F28DE9841953B9510081FA46 /* BlackAlien.m in Sources */,
 				F2E96581190BB1EF00D0C1FF /* CCClippingNode.m in Sources */,
 				F2E96614190BB1F000D0C1FF /* CCSpriteBatchNode.m in Sources */,
 				F2E967DE190CA41B00D0C1FF /* EndGameScene.m in Sources */,
@@ -1793,6 +1837,7 @@
 				F2E9666B190BB1F000D0C1FF /* CCProfiling.m in Sources */,
 				F2E96692190BB1F000D0C1FF /* OALAction.m in Sources */,
 				F2E96628190BB1F000D0C1FF /* CCTexturePVR.m in Sources */,
+				F28DE98D1953B9BC0081FA46 /* RedAlien.m in Sources */,
 				F2E96737190BB1F100D0C1FF /* CCBAnimationManager.m in Sources */,
 				F2E9671B190BB1F100D0C1FF /* mat4stack.c in Sources */,
 				F2E965BA190BB1F000D0C1FF /* CCNode.m in Sources */,
@@ -1811,6 +1856,7 @@
 				F2E9667B190BB1F000D0C1FF /* NSThread+performBlock.m in Sources */,
 				F2E96606190BB1F000D0C1FF /* CCShaderCache.m in Sources */,
 				F2E96743190BB1F100D0C1FF /* CCBSequenceProperty.m in Sources */,
+				F28DE9901953BA1C0081FA46 /* SpaceDweller.m in Sources */,
 				F2E967C6190BB1F100D0C1FF /* IntroScene.m in Sources */,
 				F2E9664A190BB1F000D0C1FF /* CCGLView.m in Sources */,
 				F2E9660D190BB1F000D0C1FF /* CCSprite.m in Sources */,
@@ -1824,7 +1870,9 @@
 				F2E965E2190BB1F000D0C1FF /* CCProgressNode.m in Sources */,
 				F2E965D5190BB1F000D0C1FF /* CCPhysicsBody.m in Sources */,
 				F2E9665A190BB1F000D0C1FF /* CCWindow.m in Sources */,
+				F23217A3195A5E8600CE4D94 /* PowerUp.m in Sources */,
 				F2E9656F190BB1EF00D0C1FF /* CCActionProgressTimer.m in Sources */,
+				F28DE9871953B9900081FA46 /* PurpleAlien.m in Sources */,
 				F2E96725190BB1F100D0C1FF /* plane.c in Sources */,
 				F2E966A8190BB1F000D0C1FF /* OALSimpleAudio.m in Sources */,
 				F2E9659A190BB1F000D0C1FF /* CCGLProgram.m in Sources */,
@@ -1840,6 +1888,7 @@
 				F2E96643190BB1F000D0C1FF /* CCDirectorIOS.m in Sources */,
 				F2E9661A190BB1F000D0C1FF /* CCSpriteFrameCache.m in Sources */,
 				F2E966D9190BB1F100D0C1FF /* mach_timing.c in Sources */,
+				F28DE9931953C1350081FA46 /* Constants.m in Sources */,
 				F2E966BD190BB1F000D0C1FF /* ALListener.m in Sources */,
 				F2E96596190BB1EF00D0C1FF /* ccFPSImages.m in Sources */,
 				F2E9666D190BB1F000D0C1FF /* ccUtils.c in Sources */,
@@ -1886,6 +1935,7 @@
 				F2E96716190BB1F100D0C1FF /* aabb.c in Sources */,
 				F2E96740190BB1F100D0C1FF /* CCBsequence.m in Sources */,
 				F2E965A1190BB1F000D0C1FF /* CCLabelAtlas.m in Sources */,
+				F28DE98A1953B9AC0081FA46 /* GreenAlien.m in Sources */,
 				F2E9663C190BB1F000D0C1FF /* cocos2d.m in Sources */,
 				F2E966C4190BB1F100D0C1FF /* ALSource.m in Sources */,
 				F2E965CC190BB1F000D0C1FF /* CCParticleSystem.m in Sources */,

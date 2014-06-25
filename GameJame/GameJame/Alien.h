@@ -8,14 +8,10 @@
 
 #import <UIKit/UIKit.h>
 #import "cocos2d.h"
+#import "SpaceDweller.h"
 
 @class AlienGenerator;
-@interface Alien : CCSprite
+@interface Alien : SpaceDweller
 
-@property (nonatomic, assign) CGPoint velocity;
-@property (nonatomic, weak) AlienGenerator *parentGenerator;
-@property (nonatomic, assign) float relative_rotation;
-@property (nonatomic, assign) BOOL submerged;
-@property (nonatomic, assign) float redAlienModifier;
 
 @end
